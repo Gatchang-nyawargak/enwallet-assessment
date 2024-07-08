@@ -20,9 +20,10 @@ class IncomeAdapter(val incomeTracker:List<Income>):
 
     override fun onBindViewHolder(holder: IncomeViewHolder, position: Int) {
        var income = incomeTracker[position]
-        holder.incomeIn.text= income.text.toString()
-        holder.incomeOut.text = income.image.toString()
-        holder.transactiom.text=income.amount.toString()
+        holder.tvName.text = income.text
+        holder.tvAmount.text = income.amount
+        holder.tvData.text = income.date
+
 
     }
 
@@ -34,14 +35,9 @@ class IncomeAdapter(val incomeTracker:List<Income>):
 
 class  IncomeViewHolder(itemView:View):
         RecyclerView.ViewHolder(itemView){
-            val incomeIn = itemView.findViewById<TextView>(R.id.textView9)
-             val amount = itemView.findViewById<TextView>(R.id.textView10)
-             val incomeOut = itemView.findViewById<TextView>(R.id.textView11)
-             val bal  = itemView.findViewById<TextView>(R.id.textView12)
-             val balance = itemView.findViewById<TextView>(R.id.textView13)
-            val balanceKes  = itemView.findViewById<TextView>(R.id.textView14)
-            val transactiom = itemView.findViewById<TextView>(R.id.textView15)
-            val balanceKe  = itemView.findViewById<TextView>(R.id.textView16)
+            val tvName = itemView.findViewById<TextView>(R.id.tvName)
+             val tvAmount = itemView.findViewById<TextView>(R.id.tvAmount)
+              val tvData = itemView.findViewById<TextView>(R.id.tvAmount)
 
 
 
